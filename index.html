@@ -1,80 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jay - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header class="header">
         <div class="container">
-            <h1>Jay's Portfolio</h1>
+            <h1>JaQuan Williams</h1>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="about" class="about">
+    <section id="about" class="section about">
         <div class="container">
-            <div class="about-content">
-                <img src="images/img_0264.jpg" alt="Your Image" class="about-image">
-                <div class="about-text">
-                    <h2>About Me</h2>
-                    <p>I am a dedicated and passionate web developer with a strong foundation in front-end and back-end technologies. With [1 year] of experience in the field, I have had the opportunity to work on a wide range of projects, from creating interactive and user-friendly websites to developing robust web applications. My expertise includes HTML, CSS, JavaScript, and various web development frameworks.</p>
+            <h2>About Me</h2>
+            <p>
+                I am JaQuan Williams, a passionate and creative web developer with a strong background in front-end and back-end technologies. I specialize in creating interactive and user-friendly websites and web applications. With expertise in HTML, CSS, JavaScript, and various web development frameworks, I am dedicated to delivering high-quality solutions to clients' needs.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>SQL</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Django</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>Spring</li>
+                <li>Unity</li>
+                <li>Unreal Engine</li>
+                <li>Blender</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-container">
+                <div class="project-item">
+                    <h3>Warfront: Tactical Skirmish</h3>
+                    <img class="project-image" src="images/Screenshot from 2023-09-10 16-04-39.jpg" alt="Project 1" />
+                    <div class="project-description">Warfront: Tactical Skirmish (Unity) - A dynamic low-poly FPS, inspired by Call of Duty, offering thrilling game modes against equally skilled foes.</div>
+                </div>
+
+                <div class="project-item">
+                    <h3>Forerunner</h3>
+                    <img class="project-image" src="images/Foreunner_logo.png" alt="Project 2" />
+                    <div class="project-description">Forerunner (Unreal engine) - A groundbreaking action-adventure RPG blending top-down gameplay, Undertale-inspired combat, and time travel mechanics.</div>
+                </div>
+
+                <div class="project-item">
+                    <h3>Zombie Apocalypse</h3>
+                    <img class="project-image" src="images/Screenshot from 2023-09-10 20-01-44.jpg" alt="Project 3" />
+                    <div class="project-description">In summary, the Python code provides a basic interactive game where the player must choose actions to either defeat a zombie or escape from it.</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <!-- List your skills here -->
-            <ul>
-                <li>Web Development</li>
-                <li>Game Design</li>
-                <li>C#</li>
-                <li>HTML</li>
-                <li>JavaScript</li>
-                <li>CSS</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2>Projects</h2>
-            <!-- Project buttons that link to project pages -->
-            <div class="project-button">
-                <a href="project1.html">
-                    <button>A Call to War</button>
-                </a>
-            </div>
-            <div class="project-button">
-                <a href="project2.html">
-                    <button>Land of Dangers</button>
-                </a>
-            </div>
-            <div class="project-button">
-                <a href="project3.html">
-                    <button>Zombie Apocalypse</button>
-                </a>
-            </div>
-            <!-- Add more buttons as needed -->
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
+    <section id="contact" class="section contact">
         <div class="container">
             <h2>Contact Me</h2>
-            <p>You can reach me at <a href="mailto:jaquan.williams101@gmail.com" target="_blank">jaquan.williams101@gmail.com</a></p>
+            <p>
+                You can reach me at
+                <a href="mailto:jaquan.williams101@gmail.com" target="_blank">jaquan.williams101@gmail.com</a>
+            </p>
         </div>
     </section>
 
@@ -83,5 +91,24 @@
             <p>&copy; 2023 Jay</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const projectItems = document.querySelectorAll(".project-item");
+
+            projectItems.forEach(function (item) {
+                const description = item.querySelector(".project-description");
+
+                item.addEventListener("mouseenter", function () {
+                    description.style.display = "block";
+                });
+
+                item.addEventListener("mouseleave", function () {
+                    description.style.display = "none";
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>
